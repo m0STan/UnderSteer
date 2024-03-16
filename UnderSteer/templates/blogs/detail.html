@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}{{post.post_title}}{% endblock %}
+
+{% block content %}
+   
+<h2>{{post.post_title}}</h2>
+
+<p>{{post.post_text}}</p>
+
+
+<em>{{post.pub_date}}</em>
+
+<hr>
+{% if latest_comments_list %}
+
+{% for a in latest_comments_list %}
+            <p>
+
+                <strong>{{a.author_name}}</strong>
+                <p>{{a.comment_text}}</p>
+            </p>
+      
+        {% endfor %}
+{% else %}
+Комментарии не найдены! Станьте первым
+{% endif %}
+<hr>
+<form action="{% url 'blogs:leave_comment' post.id %}" method ='POST'>
+
+    {%csrf_token%}
+
+    <input type="text" required placeholder="Ваше имя" name="name"><br>
+    <textarea name="text" required placeholder="Текст комментария" cols="30" rows="10"></textarea><br>
+
+    <button type='submit'>Оставить комментарий</button>
+
+</form>
+
+{% endblock %}

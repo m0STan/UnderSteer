@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Последние записи{% endblock %}
+
+{% block content %}
+
+    {% if latest_posts_list %}
+        {% for p in latest_posts_list %}
+            {% if p.was_posted_recently %}
+                <a href = "{% url 'blogs:detail' p.id %}">{{p.post_title}}<br></a>
+            {% endif%}
+        {% endfor %}
+    {% else %}
+    Посты не найдены =
+    {%endif%}
+{% endblock %}

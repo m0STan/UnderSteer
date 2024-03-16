@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" >
+    <title>{% block title %}Мой сайт {% endblock %}</title>
+</head>
+
+
+
+<body>
+    <header>
+        <div id="contact_us">
+        <div class="width_limiter">
+        Звоните нам: <span id="tel_number">+7 (953) 343-42-24</span>
+        </div>
+        </div>
+        
+        <div id="high_banner">
+        <div class="width_limiter">
+        <img src="img/logo_1_stroke_2.png">
+        </div>
+        </div>
+        
+        <nav class="menu">
+        <ul>
+        <li><a href="index.php">Главная</a></li>
+        <li><a href="calculator.php">Калькулятор</a></li>
+        <li><a href="modeling.php">3Д-моделирование</a></li>
+        <li><a href="faq.php">Частые вопросы</a></li>
+        <li><a href="payment_and_delivery.php">Оплата и доставка</a></li>
+        <li id="last_item"><a href="contacts.php">Контакты</a></li>
+        </ul>
+        </nav>
+        </header>
+
+    {% block content %}{% endblock %}
+</body>
+
+</html>

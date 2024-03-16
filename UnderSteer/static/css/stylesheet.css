@@ -1,0 +1,80 @@
+#contact_us
+{
+padding: 10px;
+background-color:#262525;
+color:#CCCCCC;
+font-size: 1.1em;
+}
+
+#contact_us #tel_number
+{
+color: #bc0000;
+font-weight:700;
+}
+
+div#high_banner
+{
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 30px;
+background-image:url(../img/background_header.png);
+background-size: 100%;
+}
+
+div#high_banner img
+{
+max-width: 25%;
+max-height: 100px;
+}
+
+nav.menu
+{
+margin-bottom: 20px;
+padding-top: 15px;
+padding-bottom: 15px;
+background-color:#454545;
+display: table;
+width: 100%;
+-webkit-box-shadow: 0 10px 6px -6px #777;
+-moz-box-shadow: 0 10px 6px -6px #777;
+box-shadow: 0 10px 6px -6px #777;
+}
+
+nav.menu ul
+{
+width: 100%;
+text-align: center;
+display: table-cell;
+vertical-align: middle;
+}
+
+nav.menu ul #last_item
+{
+border-right: 0px;
+}
+
+nav.menu ul li
+{
+width: 20%;
+border-right: 1px solid #707070;
+display: inline;
+vertical-align: baseline;
+}
+
+nav.menu ul li a
+{
+color: #FFFFFF;
+font-style: normal;
+text-decoration: none;
+vertical-align:baseline;
+text-align:center;
+margin-left: 2%;
+margin-right: 2%;
+font-size:1.1em;
+font-weight:600;
+}
+
+nav.menu ul li a:hover
+{
+color:#110505;
+}
