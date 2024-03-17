@@ -22,10 +22,14 @@ class Post(models.Model):
     
     def was_posted_recently(self):
         return self.posted_date >= (timezone.now()-datetime.timedelta(days=7))
-    
+    def __str__(self):
+        return self.post_title
     
 class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete = models.CASCADE)
     author_name = models.CharField('имя автора',max_length = 200)
     comment_text = models.TextField('текст комментария')
     comment_date = models.DateTimeField('время комментария')
+    
+    def __str__(self):
+        return self.author_name

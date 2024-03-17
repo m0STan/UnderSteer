@@ -9,16 +9,16 @@
 <p>{{post.post_text}}</p>
 
 
-<em>{{post.pub_date}}</em>
+<em>{{post.posted_date}}</em>
 
 <hr>
 {% if latest_comments_list %}
 
-{% for a in latest_comments_list %}
+{% for p in latest_comments_list %}
             <p>
 
-                <strong>{{a.author_name}}</strong>
-                <p>{{a.comment_text}}</p>
+                <strong>{{p.author_name}}</strong>
+                <p>{{p.comment_text}}</p>
             </p>
       
         {% endfor %}
