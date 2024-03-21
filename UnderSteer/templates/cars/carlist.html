@@ -1,0 +1,13 @@
+{% block title %}Последние записи{% endblock %}
+<br>
+{% block content %}
+
+    {% if car_dict %}
+        {% for car in car_dict %}
+                
+                <a href = "{% url 'cars:detail' car %}">{{car}}<br></a>
+        {% endfor %}
+    {% else %}
+    Посты не найдены =
+    {%endif%}
+{% endblock %}
