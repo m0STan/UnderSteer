@@ -1,6 +1,8 @@
 from django.db import models
 import datetime
 from django.utils import timezone
+
+
 class Blog(models.Model):
     blog_owner = models.CharField('владелец блога', max_length = 200)
     blog_owner_description = models.TextField('о себе')
@@ -24,7 +26,8 @@ class Post(models.Model):
         return self.posted_date >= (timezone.now()-datetime.timedelta(days=7))
     def __str__(self):
         return self.post_title
-    
+
+
 class Comment(models.Model):
     post = models.ForeignKey(Post,on_delete = models.CASCADE)
     author_name = models.CharField('имя автора',max_length = 200)
